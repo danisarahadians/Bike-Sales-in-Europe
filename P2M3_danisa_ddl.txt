@@ -1,0 +1,55 @@
+URL Dataset : https://www.kaggle.com/datasets/sadiqshah/bike-sales-in-europe
+
+Querying :
+(Karena pada perintah soal dilakukan data cleaning, jadi disini nama kolom saya menggunakan huruf kapital dan spasi)
+
+Syntax:
+create database milestone3;
+
+CREATE TABLE table_m3 (
+    "ID" SERIAL PRIMARY KEY,              -- Kolom auto-increment
+    "Date" date,                          -- Kolom tanggal
+    "Day" INT,                            -- Kolom hari
+    "Month" VARCHAR(20),                  -- Kolom bulan (dalam bentuk teks)
+    "Year" INT,                           -- Kolom tahun
+    "Customer Age" INT,                   -- Kolom umur pelanggan
+    "Age Group" VARCHAR(20),              -- Kelompok umur (teks)
+    "Customer Gender" VARCHAR(10),        -- Gender pelanggan
+    "Country" VARCHAR(50),                -- Negara pelanggan
+    "State" VARCHAR(50),                  -- Negara bagian
+    "Product Category" VARCHAR(50),       -- Kategori produk
+    "Sub_Category" VARCHAR(50),           -- Sub-kategori produk
+    "Product" VARCHAR(100),               -- Produk
+    "Order Quantity" INT,                 -- Kuantitas pesanan
+    "Unit Cost" INT,                      -- Biaya per unit
+    "Unit Price" INT,                     -- Harga per unit
+    "Profit" INT,                         -- Profit dari transaksi
+    "Cost" INT,                           -- Total biaya
+    "Revenue" INT                         -- Total revenue
+);
+
+copy table_m3(
+    "ID",
+    "Date",
+    "Day",
+    "Month",
+    "Year",
+    "Customer Age",
+    "Age Group",
+    "Customer Gender",
+    "Country",
+    "State",
+    "Product Category",
+    "Sub_Category",
+    "Product",
+    "Order Quantity",
+    "Unit Cost",
+    "Unit Price",
+    "Profit",
+    "Cost",
+    "Revenue"
+) FROM '/tmp/sales_processed.csv' 
+DELIMITER ',' 
+CSV HEADER;
+
+select * from table_m3

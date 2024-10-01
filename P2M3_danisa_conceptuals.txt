@@ -1,0 +1,73 @@
+----------------------------------------------------------------
+                    Conceptuals Problem
+----------------------------------------------------------------
+
+1. NoSQL adalah sebuah sistem database dimana tidak menggunakan query SQL untuk mengirim sebuah query. Kemudian, sistem skema 
+tabel pada NoSQL juga tidak terlalu kaku seperti yang biasa ada di SQL, contohnya jika di SQL biasa menggunakan tabel untuk 
+datanya, justru NoSQL menggunakan model penyimpanan yang jauh lebih fleksibel, seperti Document-Oriented, Graph-Based, Key-Value,
+ataupun Column-Based. NoSQL Database juga sanggup menangani datadalam jumlah besar tersebut, serta dapat memberikan performa pemrosesan yang cepat. 
+
+________________________________________________________________________________________________________________________________
+
+2. Penggunaan NoSQL:
+- Membutuhkan volume data dalam skala besar
+- Membutuhkan pengolahan data yang tidak terstruktur seperti dokumen, grafik, ataupun data key-value pairs
+- Fast-paced Agile development
+
+Penggunaan RDBMS:
+- Data terstruktur (tersimpan sudah dalam bentuk row dan column) dan volume yang relatif lebih kecil 
+- Ketika datanya nanti membutuhkan complexity query, trasactional integrity, dan data terstruktur
+- Ketika banyak user yang perlu mengakses dan mungkin mengupdate database concurrently
+- Data membutuhkan tipe data yang sesuai dengan seharusnya
+
+________________________________________________________________________________________________________________________________
+
+3. Pertama ada MongoDB, MongoDB adalah database NoSQL yang berbasis dokumen, di mana data disimpan dalam format JSON seperti BSON (Binary JSON).
+Kelebihan : 
+- MongoDB tidak memerlukan skema tetap, sehingga memungkinkan penyimpanan data dengan struktur yang bervariasi di dalam satu koleksi.
+- Meskipun NoSQL, MongoDB tetap menyediakan kueri yang kuat dan fleksibel untuk manipulasi data seperti filtering, aggregation, dan indexing
+- MongoDB dirancang untuk beban kerja yang memerlukan throughput tinggi dengan latensi rendah, ideal untuk aplikasi web dan mobile real-time.
+
+Kedua ada Cassandra, Cassandra adalah database NoSQL berbasis kolom yang dikembangkan oleh Apache. Platform ini dirancang untuk menangani
+data dalam jumlah besar secara terdistribusi. 
+Kelebihan :
+- Sangat baik untuk skala besar dengan kebutuhan throughput yang tinggi karena dapat menambahkan node ke dalam kluster tanpa downtime.
+- Pengguna bisa mengatur level konsistensi data sesuai dengan kebutuhan, mulai dari strong consistency hingga eventual consistency, memberikan 
+fleksibilitas pada pengembang.
+- Cocok untuk aplikasi global yang memerlukan replikasi dan akses cepat di berbagai lokasi geografis.
+
+________________________________________________________________________________________________________________________________
+
+4. Airflow adalah sebuah tools yang digunakan untuk developing, monitoring, dan scheduling worflow. Airflow bekerja seperti pipeline
+yang terkonfigurasi dengan python code untuk mengotomatisasi serangkaian tugas yang biasanya dilakukan secara manual dalam proses pemrosesan
+data, seperti mengambil data dari sumber tertentu, membersihkan data, hingga memuatnya ke tempat lain (misalnya database atau layanan analitik).
+
+________________________________________________________________________________________________________________________________
+
+5. Great Expectation adalah sebuah tools atau library dimana digunakan untuk memvalidasi data agar sesuai dengan teknikal requirements yang diharuskan
+seperti data konteks dan kriteria data harus seperti aturan yang ditentukan. Intinya, Great Expectations adalah alat yang sangat membantu untuk 
+memastikan kualitas data tetap terjaga sepanjang data life cycle.
+
+________________________________________________________________________________________________________________________________
+
+6. Batch Processing adalah metode pemrosesan data di mana data dikumpulkan, diproses, dan dieksekusi dalam kelompok besar atau "batch". 
+Berbeda dengan real-time processing, yang memproses data segera setelah data diterima, batch processing memproses data dalam waktu yang 
+telah ditentukan atau ketika sejumlah data tertentu telah terkumpul. Batch processing sangat efektif untuk tugas-tugas yang tidak memerlukan
+hasil langsung, dan umumnya digunakan ketika memproses data dalam volume besar. 
+Contoh penggunaan : 
+- Pada ETL, Batch processing digunakan untuk mengumpulkan data dari berbagai sumber (ekstraksi), membersihkannya dan mengubahnya (transformasi), 
+dan akhirnya memuatnya ke dalam data warehouse (load) setiap hari atau mingguan.
+
+Tools yang digunakan :
+- Apache Spark
+- Apache Hadoop
+- Apache Airflow
+- Aws batch
+
+Keunggulan batch processing :
+- Efisiensi Waktu karena semua tugas dijalankan sekaligus, batch processing biasanya lebih efisien untuk tugas yang berulang dan memproses data dalam jumlah besar.
+- Batch processing memungkinkan otomatisasi pekerjaan berulang tanpa perlu intervensi manual, sehingga menghemat waktu dan tenaga kerja.
+
+Kekurangan bacth processing :
+- Batch processing tidak cocok untuk tugas yang memerlukan hasil secara instan atau real-time, karena data diproses dalam interval waktu tertentu.
+- Karena menunggu sampai batch siap diproses, ada keterlambatan dalam memperoleh hasil, yang bisa menjadi kendala dalam aplikasi yang memerlukan data segar atau segera.
