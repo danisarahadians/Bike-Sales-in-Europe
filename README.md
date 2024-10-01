@@ -25,41 +25,6 @@ This project conducts an in-depth analysis of the Bike Sales in Europe dataset u
 - ![Docker](https://img.shields.io/badge/-Docker-2496ED?style=flat-square&logo=Docker&logoColor=white) Docker
 - ![Jupyter](https://img.shields.io/badge/-Jupyter-F37626?style=flat-square&logo=Jupyter&logoColor=white) Jupyter Notebooks
 
-## 📁 Project Structure
-
-```
-amazon-prime-user-analysis/
-│
-├── dashboard-kibana/
-│   ├── conclusions.png
-│   ├── dashboard.jpg
-│   ├── introduction & objective.png
-│   ├── plot & insight 01.png
-│   ├── plot & insight 02.png
-│   ├── plot & insight 03.png
-│   ├── plot & insight 04.png
-│   ├── plot & insight 05.png
-│   └── plot & insight 06.png
-│
-├── dataset/
-│   ├── dataset_cleaned.csv
-│   └── dataset_raw.csv
-│
-├── images/
-│   ├── airflow-2.jpg
-│   ├── airflow.jpg
-│   └── amazon-prime.jpg
-│
-├── validation_results/
-│   ├── amazon_prime_userbase_expectations.json
-│   └── validation_results.json
-│
-├── automation_script_DAG.py
-├── data-validation-great-expectation.ipynb
-├── posgresql-query.txt
-└── README.md
-```
-
 ## 📊 Dataset
 
 The dataset used in this project is the Amazon Prime Userbase Dataset, available on Kaggle:
